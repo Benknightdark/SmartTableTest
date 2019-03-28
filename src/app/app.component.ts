@@ -36,7 +36,7 @@ export class AppComponent implements OnInit {
     this.source = new ServerDataSource(http, { endPoint: 'https://jsonplaceholder.typicode.com/photos?_start=1&_limit=10' });
     console.log(`取得當前Table資訊 ${this.source.getPaging()}`)
     this.source.onChanged().subscribe(data => {
-      console.log(`Table已資料來源改變`)
+      console.log(`Table資料來源已改變`)
       console.log(data)
     })
   }
